@@ -1,13 +1,32 @@
 <svg class="background">  
   <image id="speech" x="22" y="154" width="254" height="54" href="speech.png" load="sync" />
    
-  <image id="hour-left" x="-8" y="66" width="82" height="110" href="large-1.png" load="sync" />
-  <image id="hour-right" x="54" y="60" width="82" height="110" href="large-2.png" load="sync" />
+  <image id="hour-left" x="0" y="0" width="82" height="110" href="large-1.png" load="sync" />
+  <image id="hour-right" x="0" y="0" width="82" height="110" href="large-2.png" load="sync" />
   
-  <image id="minute-left" x="152" y="58" width="82" height="110" href="large-3.png" load="sync" />
-  <image id="minute-right" x="218" y="56" width="82" height="110" href="large-2.png" load="sync" />
+  <image id="minute-left" x="0" y="0" width="82" height="110" href="large-3.png" load="sync" />
+  <image id="minute-right" x="0" y="0" width="82" height="110" href="large-2.png" load="sync" />
  
-  <image id="colon" x="104" y="60" width="82" height="110" href="large-Colon.png" load="sync" />
+  <image id="colon" x="0" y="0" width="82" height="110" href="large-Colon.png" load="sync" />
   
+  <svg x="0" y="28">
+    <image id="day" x="0" y="6" width="72" height="40" href="small-Fri.png" load="sync" />
+    
+    <image id="date-1" x="60" y="3" width="30" height="42" href="small-1.png" load="sync" />
+    <image id="date-2" x="80" y="2" width="30" height="42" href="small-2.png" load="sync" />
+    <image id="date-3" x="100" y="2" width="30" height="42" href="small-Dash.png" load="sync" />
+    <image id="date-4" x="120" y="1" width="30" height="42" href="small-3.png" load="sync" />
+    <image id="date-5" x="140" y="0" width="30" height="42" href="small-0.png" load="sync" />
+  </svg>
+  
+  <svg x="170" y="26">
+    <image id="steps-1" x="0" y="0" width="30" height="42" href="small-Dollar.png" load="sync" />
+    <image id="steps-2" x="20" y="0" width="30" height="42" href="small-1.png" load="sync" />
+    <image id="steps-3" x="40" y="0" width="30" height="42" href="small-2.png" load="sync" />
+    <image id="steps-4" x="60" y="1" width="30" height="42" href="small-3.png" load="sync" />
+    <image id="steps-5" x="80" y="2" width="30" height="42" href="small-4.png" load="sync" />
+    <image id="steps-6" x="100" y="2" width="30" height="42" href="small-5.png" load="sync" />
+  </svg>
+    
   <image id="michael" x="154" y="176" width="146" height="124" href="michael.png" load="sync" />
 </svg>
