@@ -7,29 +7,33 @@ export function zeroPad(i) {
 }
 
 export function drawDate(dateDigits, month, day) {
-  let month = ("" + month++);
-  let day = ("" + day);
+  let date = (month += 1) + "-" + day;
   
-  if (month.length > 1) {
-    setSmallDigitValue(dateDigits[0], month[0]);
-    setSmallDigitValue(dateDigits[1], month[1]);
-    setSmallDigitValue(dateDigits[2], "Dash");
-  } else {
-    setSmallDigitValue(dateDigits[0], month[0]);
-    setSmallDigitValue(dateDigits[1], "Dash");
+  for (var i = 0; i < date.length; i++) {    
+    if (date[i] == "-") {
+      setSmallDigitValue(dateDigits[i], "Dash");
+    } else {
+      setSmallDigitValue(dateDigits[i], date[i]);
+    }
+  }
+  
+  for (var i = date.length; i < dateDigits.length; i++) {    
+    dateDigits[i].style.display = "none";
   }
 }
 
 export function drawSteps(stepDigits, steps) {
-  let steps = ("" + steps);
-      
-  for (var i = steps.length; i > 0; i--) {
-    setSmallDigitValue(stepDigits[i], steps[i]);
+  let steps = ("$" + steps);
+        
+  for (var i = stepDigits.length - 1; i > stepDigits.length - steps.length - 1; i--) {    
+    if (steps[i] == "$") {
+      setSmallDigitValue(stepDigits[i], "Dollar");
+    } else {
+      setSmallDigitValue(stepDigits[i], steps[i]);
+    }
   }
   
-  setSmallDigitValue(stepDigits[stepDigits.length - 1 - steps.length], "Dollar");
-  
-  for (var i = 0; i < stepDigits.length - 1 - steps.length; i++) {
+  for (var i = stepDigits.length - steps.length - 1; i > 0; i--) {    
     stepDigits[i].style.display = "none";
   }
 }
