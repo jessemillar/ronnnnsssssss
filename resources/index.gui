@@ -1,6 +1,4 @@
-<svg class="background">
-  <text id="myLabel" />
-  
+<svg class="background">  
   <image id="speech" x="22" y="154" width="254" height="54" href="speech.png" load="sync" />
    
   <image id="hour-left" x="-8" y="66" width="82" height="110" href="large-1.png" load="sync" />

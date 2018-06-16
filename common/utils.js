@@ -5,3 +5,12 @@ export function zeroPad(i) {
   }
   return i;
 }
+
+export function setDigitPosition(digit, pos) {
+  digit.x = pos.x;
+  digit.y = pos.y;
+}
+
+export function setLargeDigitValue(digit, val) {
+  digit.image = `large-${val}.png`;
+}
