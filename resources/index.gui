@@ -1,0 +1,15 @@
+<svg class="background">
+  <text id="myLabel" />
+  
+  <image id="speech" x="22" y="154" width="254" height="54" href="speech.png" load="sync" />
+   
+  <image id="hour-left" x="-8" y="66" width="82" height="110" href="large-1.png" load="sync" />
+  <image id="hour-right" x="54" y="60" width="82" height="110" href="large-2.png" load="sync" />
+  
+  <image id="minute-left" x="152" y="58" width="82" height="110" href="large-3.png" load="sync" />
+  <image id="minute-right" x="218" y="56" width="82" height="110" href="large-2.png" load="sync" />
+ 
+  <image id="colon" x="104" y="60" width="82" height="110" href="large-Colon.png" load="sync" />
+  
+  <image id="michael" x="154" y="176" width="146" height="124" href="michael.png" load="sync" />
+</svg>
