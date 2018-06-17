@@ -7,7 +7,7 @@ export function zeroPad(i) {
 }
 
 export function drawDate(dateDigits, month, day) {
-  let date = (month += 1 + 5) + "-" + day;
+  let date = (month += 1) + "-" + day;
   
   for (var i = 0; i < date.length; i++) {    
     if (date[i] == "-") {
