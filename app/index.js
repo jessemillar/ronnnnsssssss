@@ -52,6 +52,7 @@ clock.ontick = (evt) => {
   util.drawSteps(stepDigits, today.local.steps || 0);
   
   if (curHour > 9) {
+    hourLeft.style.visibility = "visible";
     util.setLargeDigitValue(hourLeft, ("" + curHour)[0]);
     
     util.setDigitPosition(hourLeft, pos1);
@@ -60,7 +61,7 @@ clock.ontick = (evt) => {
     util.setDigitPosition(minuteLeft, pos4);
     util.setDigitPosition(minuteRight, pos5);
   } else {
-    hourLeft.style.display = "none";
+    hourLeft.style.visibility = "hidden";
     
     util.setDigitPosition(hourRight, pos1b);
     util.setDigitPosition(colon, pos2b);

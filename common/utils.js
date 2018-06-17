@@ -7,7 +7,7 @@ export function zeroPad(i) {
 }
 
 export function drawDate(dateDigits, month, day) {
-  let date = (month += 1) + "-" + day;
+  let date = (month += 1 + 5) + "-" + day;
   
   for (var i = 0; i < date.length; i++) {    
     if (date[i] == "-") {
@@ -22,19 +22,24 @@ export function drawDate(dateDigits, month, day) {
   }
 }
 
+// TODO This is gross and could be better
 export function drawSteps(stepDigits, steps) {
   let steps = ("$" + steps);
+  var curDigit = stepDigits.length - 1;
         
-  for (var i = stepDigits.length - 1; i > stepDigits.length - steps.length - 1; i--) {    
+  for (var i = steps.length - 1; i >= 0; i--) {
     if (steps[i] == "$") {
-      setSmallDigitValue(stepDigits[i], "Dollar");
+      setSmallDigitValue(stepDigits[curDigit], "Dollar");
     } else {
-      setSmallDigitValue(stepDigits[i], steps[i]);
+      setSmallDigitValue(stepDigits[curDigit], steps[i]);
     }
+    
+    curDigit--;
   }
   
-  for (var i = stepDigits.length - steps.length - 1; i > 0; i--) {    
-    stepDigits[i].style.display = "none";
+  while (curDigit >= 0) {
+    stepDigits[curDigit].style.visibility = "hidden";
+    curDigit--;
   }
 }
 
@@ -45,10 +50,12 @@ export function setDigitPosition(digit, pos) {
 
 export function setSmallDigitValue(digit, val) {
   digit.image = `small-${val}.png`;
+  digit.style.visibility = "visible";
 }
 
 export function setLargeDigitValue(digit, val) {
   digit.image = `large-${val}.png`;
+  digit.style.visibility = "visible";
 }
 
 export function setDayValue(day, val) {
