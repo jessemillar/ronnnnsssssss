@@ -18,7 +18,7 @@ export function drawDate(dateDigits, month, day) {
   }
   
   for (var i = date.length; i < dateDigits.length; i++) {    
-    dateDigits[i].style.display = "none";
+    dateDigits[i].style.visibility = "hidden";
   }
 }
 
